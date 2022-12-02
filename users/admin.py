@@ -4,4 +4,5 @@ from .models import User
 
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
-    pass
+
+    list_display = ("username", "email", "name", "is_host")
